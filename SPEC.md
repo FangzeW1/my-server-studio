@@ -2,8 +2,8 @@
 
 ## STUDIO-001 · Launch a tested calculator on an existing server
 
-**Status:** Deployment kept by learner; runtime verification and personal browser result recorded. Full CI, publication and GitHub completion pending.
-**Next step:** Review learner excerpts, publish the scoped records, and verify full PR CI before merge.
+**Status:** Deployment kept by learner; runtime verification and personal browser result recorded. Full PR CI passed; final linked revision and merge verification pending.
+**Next step:** Verify full CI on the final linked revision, merge PR #2, and confirm main CI and issue closure.
 **Instructor implementation:** [issue #9](https://github.com/kaw393939/373_hosting/issues/9).
 Create your own issue from the [lesson template](.github/ISSUE_TEMPLATE/studio-calculator.md).
 
@@ -36,12 +36,12 @@ reviewed, selected evidence; never commit credentials or raw server output.
 
 | Evidence | Actual result / link |
 |---|---|
-| Prepared Black/Pylint/pytest and real-image browser checks | Local fast checks passed: Black, Pylint, 91 tests; 2 E2E deselected. Local Docker unavailable; full PR CI pending. |
+| Prepared Black/Pylint/pytest and real-image browser checks | Local fast checks passed: Black, Pylint, 91 tests; 2 E2E deselected. Local Docker unavailable; [full PR CI passed](https://github.com/FangzeW1/my-server-studio/actions/runs/42328000591), including the Docker/Chromium E2E job. The final revision must also pass before merge. |
 | Hosted image/commit, trusted HTTPS, valid and rejected API cases | Passed: [sanitized verification](studio/evidence.json). Multiply 6 × 7 → 42 (200); division by zero → 400; numeric string → 422. |
 | Preservation of unrelated services | Verify found 3 unrelated containers unchanged in identity/state/published ports. Production and QA both returned trusted HTTPS 200 after the calculator-only TLS correction. |
 | Own prediction, check interpretation, browser observation and keep/revise reason | [LEARNING.md](LEARNING.md): prediction, check interpretation, personal browser 42 result, and keep rationale recorded; assistance disclosed. |
 | Accuracy review before publishing learner excerpts | Learner approved publication and supplied the final interpretation and keep rationale verbatim. |
-| Actual PR, latest CI, merge and issue closure | Pending |
+| Actual PR, latest CI, merge and issue closure | [PR #2](https://github.com/FangzeW1/my-server-studio/pull/2), closing [issue #1](https://github.com/FangzeW1/my-server-studio/issues/1). [Actual full CI](https://github.com/FangzeW1/my-server-studio/actions/runs/42328000591) passed; final-revision CI and merge/closure will be verified on GitHub. |
 
 Link the exported `studio/evidence.json`, actual CI and issue/PR when available.
 CI does not deploy this server. A fixture, green check, timestamp, closed issue
